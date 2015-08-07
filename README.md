@@ -12,7 +12,7 @@ See full instructions [here](https://github.com/github/hubot/blob/master/docs/sc
 
 ## Commands
 
-- `slack delete last [<count>]` - <Delete the last (N) Hubot posts in the current room>
+- `slack delete last [<count>]` - Delete the last (N) Hubot posts in the current room
 
 ## Suggested Setup
 
