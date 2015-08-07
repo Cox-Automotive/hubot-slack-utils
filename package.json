@@ -1,7 +1,7 @@
 {
   "name": "hubot-slack-utils",
   "description": "A hubot script for miscellaneous Slack utilities.",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "brianantonelli <brian.antonelli@autotrader.com>",
   "license": "MIT",
   "keywords": [
