@@ -1,7 +1,7 @@
 
 # Hubot Slack Utilities [![npm version](https://badge.fury.io/js/hubot-slack-utils.svg)](http://badge.fury.io/js/hubot-slack-utils) [![Build Status](https://travis-ci.org/Cox-Automotive/hubot-slack-utils.png)](https://travis-ci.org/Cox-Automotive/hubot-slack-utils)
 
-This script is designed to be used with a [Hubot](http://hubot.github.com) to interact with the Mashery API.
+This script is designed to be used with a [Hubot](http://hubot.github.com) to interact with Slack.
 
 ## Adding to Your Hubot
 
