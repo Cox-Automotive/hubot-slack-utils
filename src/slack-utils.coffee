@@ -17,9 +17,14 @@ botname = process.env.HUBOT_BOT_NAME
 baseURL = 'https://slack.com/api'
 
 getHistory = (channel, cb) ->
-  request.get {url: "#{baseURL}/channels.history?token=#{token}&channel=#{channel}&count=15", json: true}, (err, res, history) ->
-    throw err if err
-    cb history
+  if (channel.substr(0,1) == "G")
+    request.get {url: "#{baseURL}/groups.history?token=#{token}&channel=#{channel}&count=15", json: true}, (err, res, history) ->
+      throw err if err
+      cb history
+  else
+    request.get {url: "#{baseURL}/channels.history?token=#{token}&channel=#{channel}&count=15", json: true}, (err, res, history) ->
+      throw err if err
+      cb history
 
 getUserId = (username, cb) ->
   request.get {url: "#{baseURL}/users.list?token=#{token}", json: true}, (err, res, users) ->
