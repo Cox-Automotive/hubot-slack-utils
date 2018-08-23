@@ -6,7 +6,7 @@
 #   HUBOT_BOT_NAME
 #
 # Commands:
-#   slack delete last [<count>] - <Delete the last (N) Hubot posts in the current room or group>
+#   hubot slack delete last [<count>] - <Delete the last (N) Hubot posts in the current room or group>
 #
 # Author:
 #   brianantonelli <brian.antonelli@autotrader.com>
@@ -19,6 +19,10 @@ baseURL = 'https://slack.com/api'
 getHistory = (channel, cb) ->
   if (channel.substr(0,1) == "G")
     request.get {url: "#{baseURL}/groups.history?token=#{token}&channel=#{channel}&count=15", json: true}, (err, res, history) ->
+      throw err if err
+      cb history
+  else if (channel.substr(0,1) == "D")
+    request.get {url: "#{baseURL}/im.history?token=#{token}&channel=#{channel}&count=15", json: true}, (err, res, history) ->
       throw err if err
       cb history
   else
